@@ -42,7 +42,7 @@ $handle = get_mysql_db_handle();
             position: new google.maps.LatLng(<?php echo $row['wsg_r_x']; ?>, <?php echo $row['wsg_r_y']; ?>),
             map: map,
 	    url : "http://www.juhonkoti.net/suomen-kivet/maasto.php?x=<?php echo $row['wsg_r_x']; ?>&y=<?php echo $row['wsg_r_y']; ?>",
-            title: 'Total <?php echo $row['c']; ?> rocks in this area'
+            title: 'Total <?php echo $row['c']; ?> rocks in this area. Click to look in detail.'
         });
 
 	google.maps.event.addListener(marker, 'click', function() {
