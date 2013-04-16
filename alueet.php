@@ -14,6 +14,13 @@ $handle = get_mysql_db_handle();
     <title>Google Maps JavaScript API v3 Example: Marker Simple</title>
     <link href="https://developers.google.com/maps/documentation/javascript/examples/default.css" rel="stylesheet">
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    <script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+    	    _uacct = "UA-258836-2";
+	    urchinTracker();
+    </script>
+
     <script>
       function initialize() {
         var myLatlng = new google.maps.LatLng(60.8,25.127979);
