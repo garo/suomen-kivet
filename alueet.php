@@ -25,7 +25,11 @@ $handle = get_mysql_db_handle();
         var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
 <?php
-  $res = mysql_query("select wsg_r_x, wsg_r_y, count(*) as c from kivet group by wsg_r_x, wsg_r_y having count(*) > 10 order by count(gid)", $handle);
+  $limit = (int) $_GET['limit'];
+  if (!$limit) {
+    $limit = 15;
+  } 
+  $res = mysql_query("select wsg_r_x, wsg_r_y, count(*) as c from kivet group by wsg_r_x, wsg_r_y having count(*) > $limit order by count(gid)", $handle);
   if (!$res) {
     error_log("no res");
     error_log(mysql_error());
