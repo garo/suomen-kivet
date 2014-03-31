@@ -23,11 +23,11 @@ create index kivet_wsg_r_xy on kivet (wsg_r_x, wsg_r_y);
 
 */
 
-var connection = mysql.createConnection({host:"db1.kapsi.fi", user:"garo", password:"6x3NLzD5Sz", database:"garo"});
+var connection = mysql.createConnection({host:"example.database.com", user:"example-user", password:"example", database:"example-database"});
 connection.connect(function(err) {
     console.log("mysql connected");
 
-    var files = findit.sync("/home/users/garo/siilo/tmp/gml");
+    var files = findit.sync("./gml");
     console.log("files: ", files);
 
     (function nextFile(i) {
